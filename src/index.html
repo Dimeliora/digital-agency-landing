@@ -8,5 +8,135 @@
 		<link rel="stylesheet" href="/styles.css" />
 		<script src="/script.js" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<header class="header">
+			<div class="header__logo">
+				<a href="/" class="header__logo-link">
+					<img
+						src="./images/logo.png"
+						alt="Company logo"
+						class="header__logo-image"
+					/>
+				</a>
+			</div>
+			<nav class="header__menu">
+				<a href="/" class="header__link">Home</a>
+				<a href="/" class="header__link">Your benefits</a>
+				<a href="/" class="header__link">Our process</a>
+				<a href="/" class="header__link">Our works</a>
+				<a href="/" class="header__link">Testimonials</a>
+				<a href="/" class="header__link">Start a project</a>
+			</nav>
+			<button class="header__button button">Get started</button>
+		</header>
+		<main>
+			<section class="promo">
+				<div class="container">
+					<h1 class="promo__heading">A Digital Product Design Agency</h1>
+					<div class="promo__subheading">
+						We are Creative and Professional Digital Agency
+					</div>
+					<button class="promo__button button">Get started</button>
+				</div>
+				<picture>
+					<source
+						srcset="./images/promo@1x.webp, ./images/promo@2x.webp 2x"
+						type="image/webp"
+					/>
+					<img
+						src="./images/promo@1x.png"
+						srcset="./images/promo@2x.png 2x"
+						alt="Site dashboard screenshot"
+						class="promo__image"
+					/>
+				</picture>
+			</section>
+
+			<section class="features">
+				<div class="container">
+					<h2 class="features__heading section-heading">Features</h2>
+					<div class="features__subheading">We are here to help you with</div>
+					<div class="features__items">
+						<div class="feature-card">
+							<div class="feature-card__image feature-card__image--orange">
+								<svg class="feature-card__icon">
+									<use href="./icons/icon-sprite.svg#chart"></use>
+								</svg>
+							</div>
+							<h3 class="feature-card__title">Grow your business</h3>
+							<p class="feature-card__text">
+								<strong>The magic wand</strong> for success is in figuring out
+								how to bring in the profits and ensure the capacity needed to
+								sustain that growth for posterity.
+							</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-card__image feature-card__image--green">
+								<svg class="feature-card__icon">
+									<use href="./icons/icon-sprite.svg#discount"></use>
+								</svg>
+							</div>
+							<h3 class="feature-card__title">Drive more sales</h3>
+							<p class="feature-card__text">
+								A potential customer, once lost, is hard to retain back. But
+								<strong>keeping some critical</strong> factors in mind, we can,
+								for sure, use these loyalty programs as customer retention
+								tools.
+							</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-card__image feature-card__image--yellow">
+								<svg class="feature-card__icon">
+									<use href="./icons/icon-sprite.svg#users"></use>
+								</svg>
+							</div>
+							<h3 class="feature-card__title">Handle by Expert</h3>
+							<p class="feature-card__text">
+								We know how we candevelop deep, trust-based relationships with
+								our clients, and work together more collaboratively.
+							</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-card__image feature-card__image--cyan">
+								<svg class="feature-card__icon">
+									<use href="./icons/icon-sprite.svg#search"></use>
+								</svg>
+							</div>
+							<h3 class="feature-card__title">UX Research</h3>
+							<p class="feature-card__text">
+								UX research is the systematic study of target users and their
+								requirements, to add realistic contexts and insights to design
+								processes.
+							</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-card__image feature-card__image--purple">
+								<svg class="feature-card__icon">
+									<use href="./icons/icon-sprite.svg#graph"></use>
+								</svg>
+							</div>
+							<h3 class="feature-card__title">Business Audit</h3>
+							<p class="feature-card__text">
+								An audit examines your business's financial records to verify
+								they are accurate. This is done through a systematic review of
+								your transactions.
+							</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-card__image feature-card__image--blue">
+								<svg class="feature-card__icon">
+									<use href="./icons/icon-sprite.svg#bag"></use>
+								</svg>
+							</div>
+							<h3 class="feature-card__title">Data tracking</h3>
+							<p class="feature-card__text">
+								The hardware and software, which when used together allows you
+								to know where something is at any point in time.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

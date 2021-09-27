@@ -1,0 +1,18 @@
+.features {
+	padding: 9rem 0;
+	background: url("./images/bg-features.webp") no-repeat top/contain content-box;
+
+	&__subheading {
+		max-width: 525px;
+		margin-top: 2.5rem;
+		font-size: 4.8rem;
+		font-weight: 500;
+	}
+
+	&__items {
+		margin-top: 3rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 25px 30px;
+	}
+}

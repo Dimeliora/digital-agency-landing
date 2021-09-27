@@ -1,0 +1,17 @@
+.button {
+	padding: 2rem 5rem;
+	border: 2px solid #fff;
+	border-radius: 60px;
+	background-color: #fff;
+	color: $primary;
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s;
+
+	&:hover {
+		background-color: transparent;
+		color: #fff;
+	}
+}

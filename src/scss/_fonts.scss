@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "DM Sans";
+	src: url("../fonts/dmsans-regular.woff2") format("woff2"),
+		url("../fonts/dmsans-regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url("../fonts/dmsans-medium.woff2") format("woff2"),
+		url("../fonts/dmsans-medium.woff") format("woff");
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url("../fonts/dmsans-bold.woff2") format("woff2"),
+		url("../fonts/dmsans-bold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
