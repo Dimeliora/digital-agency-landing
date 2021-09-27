@@ -1,0 +1,40 @@
+.brands {
+	padding: 18.5rem 0;
+	text-align: center;
+
+	&__subheading {
+		max-width: 900px;
+		margin: 2.5rem auto 0;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 45px 110px;
+		align-items: center;
+		margin-top: 3rem;
+	}
+
+	&__link {
+		justify-self: center;
+		max-width: 145px;
+		transition: transform 0.2s;
+
+		&:hover {
+			text-decoration: none;
+			transform: scale(1.1);
+		}
+	}
+
+	&__logo {
+		display: block;
+		width: 100%;
+	}
+
+	&__text {
+		max-width: 380px;
+		margin: 4rem auto 0;
+		color: #3b3e43;
+		line-height: 2.5rem;
+	}
+}

@@ -5,11 +5,12 @@
 }
 
 html {
+	scroll-behavior: smooth;
 	font-size: 62.5%;
 }
 
 body {
-	background-color: #f9f8ff;
+	background-color: $bg-light;
 	font-family: "DM Sans", sans-serif;
 	font-size: 1.6rem;
 }

@@ -1,12 +1,10 @@
 .features {
-	padding: 9rem 0;
+	padding-bottom: 18rem;
 	background: url("./images/bg-features.webp") no-repeat top/contain content-box;
 
 	&__subheading {
 		max-width: 525px;
 		margin-top: 2.5rem;
-		font-size: 4.8rem;
-		font-weight: 500;
 	}
 
 	&__items {
