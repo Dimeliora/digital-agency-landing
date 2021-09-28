@@ -108,7 +108,7 @@ const webpConvert = () =>
 		.pipe(newer(`${destPath}/images`))
 		.pipe(
 			webp({
-				quality: 70,
+				quality: 80,
 			})
 		)
 		.pipe(dest(`${destPath}/images`));

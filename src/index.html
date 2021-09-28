@@ -20,15 +20,18 @@
 				</a>
 			</div>
 			<nav class="header__menu">
-				<a href="/" class="header__link">Home</a>
-				<a href="/#features" class="header__link">Your benefits</a>
-				<a href="/#workflow" class="header__link">Our process</a>
-				<a href="/" class="header__link">Our works</a>
-				<a href="/" class="header__link">Testimonials</a>
-				<a href="/" class="header__link">Start a project</a>
+				<a href="/" class="header__link menu-link">Home</a>
+				<a href="/#features" class="header__link menu-link">Your benefits</a>
+				<a href="/#workflow" class="header__link menu-link">Our process</a>
+				<a href="/#brands" class="header__link menu-link">Our works</a>
+				<a href="/" class="header__link menu-link">Testimonials</a>
+				<a href="/#get-started" class="header__link menu-link"
+					>Start a project</a
+				>
 			</nav>
 			<button class="header__button button">Get started</button>
 		</header>
+
 		<main>
 			<section class="promo">
 				<div class="container">
@@ -262,7 +265,7 @@
 				</div>
 			</section>
 
-			<section class="brands">
+			<section class="brands" id="brands">
 				<div class="container">
 					<h2 class="brands__heading section-heading">Brands</h2>
 					<div class="brands__subheading section-subheading">
@@ -346,6 +349,97 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="get-started" id="get-started">
+				<div class="container">
+					<div class="get-started__wrapper">
+						<div class="get-started__column get-started__column--left">
+							<h2 class="get-started__heading section-heading">
+								Start with us
+							</h2>
+							<div class="get-started__subheading section-subheading">
+								Start working faster today
+							</div>
+							<div class="get-started__text">
+								We know the best solution for all of your business ideas and we
+								can help you solve all business problems
+							</div>
+							<button class="get-started__button button">Get started</button>
+						</div>
+						<div class="get-started__column get-started__column--right">
+							<picture>
+								<source
+									srcset="
+										./images/get-started@1x.webp,
+										./images/get-started@2x.webp 2x
+									"
+									type="image/webp"
+								/>
+								<img
+									src="./images/get-started@1x.jpg"
+									srcset="./images/get-started@2x.jpg 2x"
+									alt="Graphs, charts, statistics..."
+									class="get-started__image"
+								/>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row footer__row--nav">
+					<div class="footer__logo">
+						<a href="/" class="footer__logo-link">
+							<img
+								src="./images/footer-logo.png"
+								alt="Company logo"
+								class="footer__logo-image"
+							/>
+						</a>
+					</div>
+					<nav class="footer__menu">
+						<a href="/" class="footer__link menu-link">Home</a>
+						<a href="/#features" class="footer__link menu-link"
+							>Your benefits</a
+						>
+						<a href="/#workflow" class="footer__link menu-link">Our process</a>
+						<a href="/#brands" class="footer__link menu-link">Our works</a>
+						<a href="/" class="footer__link menu-link">Testimonials</a>
+						<a href="/#get-started" class="footer__link menu-link"
+							>Start a project</a
+						>
+					</nav>
+					<div class="footer__socials">
+						<a href="/" class="footer__socials-link" aria-label="facebook">
+							<svg class="footer__socials-icon">
+								<use href="./icons/icon-sprite.svg#fb"></use>
+							</svg>
+						</a>
+						<a href="/" class="footer__socials-link" aria-label="instagram">
+							<svg class="footer__socials-icon">
+								<use href="./icons/icon-sprite.svg#instagram"></use>
+							</svg>
+						</a>
+						<a href="/" class="footer__socials-link" aria-label="twitter">
+							<svg class="footer__socials-icon">
+								<use href="./icons/icon-sprite.svg#twitter"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="footer__row footer__row--copyright">
+					<div class="footer__company">&copy; 2021 Company</div>
+					<div class="footer__policy">
+						<a href="/" class="footer__policy-link menu-link">Privacy policy</a>
+						<a href="/" class="footer__policy-link menu-link"
+							>Term of service</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

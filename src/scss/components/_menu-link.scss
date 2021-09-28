@@ -1,0 +1,28 @@
+.menu-link {
+	--link-color: #fff;
+	position: relative;
+	display: inline-block;
+	padding: 0.5rem 0;
+	color: var(--link-color);
+	font-weight: 500;
+	text-decoration: none;
+
+	&::after {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		content: "";
+		display: block;
+		height: 2px;
+		width: 0;
+		background-color: var(--link-color);
+		transition: width 0.2s;
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+}

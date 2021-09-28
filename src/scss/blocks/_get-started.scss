@@ -1,0 +1,46 @@
+.get-started {
+	padding: 15rem 0;
+	background: url("./images/bg-get-started.webp") no-repeat top/cover,
+		linear-gradient(to bottom, $primary 50%, $bg-light 90%);
+	color: #fff;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__column {
+		&--left {
+			max-width: 415px;
+			margin-right: 13rem;
+		}
+
+		&--right {
+			max-width: 625px;
+		}
+	}
+
+	&__heading {
+		color: #ffffff80;
+	}
+
+	&__subheading {
+		margin-top: 2.5rem;
+		color: #fff;
+	}
+
+	&__text {
+		margin-top: 2.5rem;
+		font-size: 2rem;
+		line-height: 3.4rem;
+	}
+
+	&__button {
+		margin-top: 3rem;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+	}
+}
