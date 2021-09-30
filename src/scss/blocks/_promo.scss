@@ -1,21 +1,79 @@
 .promo {
-	padding: 20rem 0 9rem;
-	background: url("./images/bg-promo.webp") no-repeat top/contain,
-		linear-gradient(to bottom, $primary 20%, $bg-light 50%);
+	padding: 22rem 0 9rem;
+	background: url("./images/bg-promo.webp") no-repeat 50% 0,
+		linear-gradient(to bottom, $primary 20%, $bg-light 80%) no-repeat;
 	color: #fff;
 	text-align: center;
+
+	@media (max-width: $xl) {
+		background-position: 50% -125%;
+	}
+
+	@media (max-width: $lg) {
+		padding: 16rem 0;
+		background-position: 50% 115%;
+	}
+
+	@media (max-width: $sm) {
+		padding: 16rem 0 10rem;
+		background-position: 50% 110%;
+	}
 
 	&__heading {
 		font-size: 6.8rem;
 		font-weight: 500;
+
+		@media (max-width: $xl) {
+			font-size: 5.8rem;
+		}
+
+		@media (max-width: $lg) {
+			font-size: 4.2rem;
+		}
+
+		@media (max-width: $md) {
+			font-size: 3.4rem;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 2.8rem;
+		}
 	}
 
 	&__subheading {
-		margin-top: 2.5rem;
+		margin-top: 3.5rem;
 		font-size: 2rem;
+
+		@media (max-width: $md) {
+			font-size: 1.8rem;
+		}
+
+		@media (max-width: $sm) {
+			margin-top: 2.5rem;
+			font-size: 1.6rem;
+		}
 	}
 
 	&__button {
 		margin-top: 5rem;
+
+		@media (max-width: $sm) {
+			margin-top: 3.5rem;
+		}
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		margin-top: 4rem;
+
+		@media (max-width: $xl) {
+			width: 900px;
+			margin: 0 auto;
+		}
+
+		@media (max-width: $lg) {
+			display: none;
+		}
 	}
 }

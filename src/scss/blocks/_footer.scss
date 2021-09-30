@@ -2,6 +2,14 @@
 	padding: 8.5rem 0 3.5rem;
 	background-color: #0d0d0d;
 
+	@media (max-width: $md) {
+		padding: 4.5rem 0 3.5rem;
+	}
+
+	@media (max-width: $sm) {
+		padding: 3rem 0 2.5rem;
+	}
+
 	&__row {
 		display: flex;
 		align-items: center;
@@ -10,16 +18,33 @@
 		&--nav {
 			padding-bottom: 2.7rem;
 			border-bottom: 1px solid #ffffff59;
+
+			@media (max-width: $xl) {
+				align-items: flex-start;
+			}
+
+			@media (max-width: $sm) {
+				flex-direction: column;
+				align-items: center;
+			}
 		}
 
 		&--copyright {
 			padding-top: 2.7rem;
 			font-size: 1.5rem;
+
+			@media (max-width: $sm) {
+				align-items: flex-start;
+			}
 		}
 	}
 
 	&__logo {
 		max-width: 175px;
+
+		@media (max-width: $md) {
+			display: none;
+		}
 	}
 
 	&__logo-link {
@@ -32,12 +57,43 @@
 		width: 100%;
 	}
 
+	&__menu {
+		@media (max-width: $xl) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px 65px;
+		}
+
+		@media (max-width: $lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $sm) {
+			gap: 20px;
+		}
+	}
+
 	&__link {
 		margin-right: 3.2rem;
 		--link-color: #ffffffcc;
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		@media (max-width: $xl) {
+			justify-self: center;
+			width: fit-content;
+			margin-right: 0;
+		}
+	}
+
+	&__socials {
+		align-self: flex-end;
+
+		@media (max-width: $sm) {
+			align-self: initial;
+			margin-top: 3rem;
 		}
 	}
 
@@ -50,9 +106,18 @@
 			margin-right: 0;
 		}
 
+		&:focus,
 		&:hover {
+			outline: none;
 			text-decoration: none;
 			transform: scale(1.2);
+		}
+
+		@media (max-width: $lg) {
+			&:focus,
+			&:hover {
+				transform: none;
+			}
 		}
 	}
 
@@ -65,12 +130,28 @@
 		color: #ffffffcc;
 	}
 
+	&__policy {
+		@media (max-width: $sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
 	&__policy-link {
 		--link-color: #ffffffcc;
 		margin-right: 2.4rem;
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		@media (max-width: $sm) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

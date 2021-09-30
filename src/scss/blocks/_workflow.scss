@@ -1,9 +1,16 @@
 .workflow {
-	min-height: 1600px;
 	padding: 19.5rem 0 18rem;
-	background: url("./images/bg-workflow.webp") no-repeat top/cover,
-		linear-gradient(to bottom, $primary 20%, $bg-light 50%);
+	background: url("./images/bg-workflow.webp") no-repeat 50% 0 / cover,
+		linear-gradient(to bottom, $primary 20%, $bg-light 80%) no-repeat;
 	text-align: center;
+
+	@media (max-width: $lg) {
+		padding: 10rem 0;
+	}
+
+	@media (max-width: $md) {
+		padding: 6rem 0;
+	}
 
 	&__heading {
 		color: #ffffff80;
@@ -20,6 +27,11 @@
 		color: #fff;
 		font-size: 2rem;
 		line-height: 3.4rem;
+
+		@media (max-width: $sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__items {

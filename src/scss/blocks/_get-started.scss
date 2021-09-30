@@ -1,22 +1,40 @@
 .get-started {
 	padding: 15rem 0;
-	background: url("./images/bg-get-started.webp") no-repeat top/cover,
-		linear-gradient(to bottom, $primary 50%, $bg-light 90%);
+	background: url("./images/bg-get-started.webp") no-repeat 50% 0 / cover,
+		linear-gradient(to bottom, $primary 50%, $bg-light 90%) no-repeat;
 	color: #fff;
+
+	@media (max-width: $lg) {
+		padding: 10rem 0;
+	}
+
+	@media (max-width: $md) {
+		padding: 6rem 0;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
+
+		@media (max-width: $lg) {
+			justify-content: center;
+		}
 	}
 
 	&__column {
 		&--left {
 			max-width: 415px;
 			margin-right: 13rem;
+
+			@media (max-width: $lg) {
+				margin-right: 0;
+			}
 		}
 
 		&--right {
-			max-width: 625px;
+			@media (max-width: $lg) {
+				display: none;
+			}
 		}
 	}
 
@@ -27,12 +45,21 @@
 	&__subheading {
 		margin-top: 2.5rem;
 		color: #fff;
+
+		@media (max-width: $sm) {
+			margin-top: 1.5rem;
+		}
 	}
 
 	&__text {
 		margin-top: 2.5rem;
 		font-size: 2rem;
 		line-height: 3.4rem;
+
+		@media (max-width: $sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__button {

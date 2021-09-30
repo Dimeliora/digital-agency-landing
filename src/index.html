@@ -30,6 +30,11 @@
 				>
 			</nav>
 			<button class="header__button button">Get started</button>
+			<button class="header__menu-button" aria-label="Menu button">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
 		</header>
 
 		<main>
@@ -40,19 +45,19 @@
 						We are Creative and Professional Digital Agency
 					</div>
 					<button class="promo__button button">Get started</button>
+					<picture>
+						<source
+							srcset="./images/promo@1x.webp, ./images/promo@2x.webp 2x"
+							type="image/webp"
+						/>
+						<img
+							src="./images/promo@1x.png"
+							srcset="./images/promo@2x.png 2x"
+							alt="Site dashboard screenshot"
+							class="promo__image"
+						/>
+					</picture>
 				</div>
-				<picture>
-					<source
-						srcset="./images/promo@1x.webp, ./images/promo@2x.webp 2x"
-						type="image/webp"
-					/>
-					<img
-						src="./images/promo@1x.png"
-						srcset="./images/promo@2x.png 2x"
-						alt="Site dashboard screenshot"
-						class="promo__image"
-					/>
-				</picture>
 			</section>
 
 			<section class="features" id="features">
@@ -62,7 +67,7 @@
 						We are here to help you with
 					</div>
 					<div class="features__items">
-						<div class="feature-card">
+						<div class="features__item feature-card">
 							<div class="feature-card__image feature-card__image--orange">
 								<svg class="feature-card__icon">
 									<use href="./icons/icon-sprite.svg#chart"></use>
@@ -75,7 +80,7 @@
 								sustain that growth for posterity.
 							</p>
 						</div>
-						<div class="feature-card">
+						<div class="features__item feature-card">
 							<div class="feature-card__image feature-card__image--green">
 								<svg class="feature-card__icon">
 									<use href="./icons/icon-sprite.svg#discount"></use>
@@ -89,7 +94,7 @@
 								tools.
 							</p>
 						</div>
-						<div class="feature-card">
+						<div class="features__item feature-card">
 							<div class="feature-card__image feature-card__image--yellow">
 								<svg class="feature-card__icon">
 									<use href="./icons/icon-sprite.svg#users"></use>
@@ -101,7 +106,7 @@
 								our clients, and work together more collaboratively.
 							</p>
 						</div>
-						<div class="feature-card">
+						<div class="features__item feature-card">
 							<div class="feature-card__image feature-card__image--cyan">
 								<svg class="feature-card__icon">
 									<use href="./icons/icon-sprite.svg#search"></use>
@@ -114,7 +119,7 @@
 								processes.
 							</p>
 						</div>
-						<div class="feature-card">
+						<div class="features__item feature-card">
 							<div class="feature-card__image feature-card__image--purple">
 								<svg class="feature-card__icon">
 									<use href="./icons/icon-sprite.svg#graph"></use>
@@ -127,7 +132,7 @@
 								your transactions.
 							</p>
 						</div>
-						<div class="feature-card">
+						<div class="features__item feature-card">
 							<div class="feature-card__image feature-card__image--blue">
 								<svg class="feature-card__icon">
 									<use href="./icons/icon-sprite.svg#bag"></use>
