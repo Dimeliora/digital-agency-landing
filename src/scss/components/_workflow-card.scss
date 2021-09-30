@@ -69,6 +69,18 @@
 	&__icon {
 		width: 24px;
 		height: 24px;
+
+		&--blue {
+			fill: #6e9cfd;
+		}
+
+		&--purple {
+			fill: #8e7efc;
+		}
+
+		&--light-blue {
+			fill: #4dbcfe;
+		}
 	}
 
 	&__title {

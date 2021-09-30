@@ -44,6 +44,30 @@
 	&__icon {
 		width: 23px;
 		height: 23px;
+
+		&--orange {
+			fill: #fead86;
+		}
+
+		&--green {
+			fill: #51a690;
+		}
+
+		&--yellow {
+			fill: #ffcf00;
+		}
+
+		&--cyan {
+			fill: #00a198;
+		}
+
+		&--purple {
+			fill: #75578e;
+		}
+
+		&--blue {
+			fill: #0985b9;
+		}
 	}
 
 	&__title {
