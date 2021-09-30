@@ -4,11 +4,11 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 3rem 6rem;
+	padding: 30px 60px;
 	background-color: transparent;
 
 	@media (max-width: $xl) {
-		padding: 3rem 4rem;
+		padding: 30px 40px;
 	}
 
 	&__logo {
@@ -52,25 +52,25 @@
 	}
 
 	&__link {
-		margin-right: 3.2rem;
 		--link-color: #fff;
+		margin-right: 32px;
 
 		&:last-child {
 			margin-right: 0;
 		}
 
 		@media (max-width: $xl) {
-			margin-right: 2.6rem;
+			margin-right: 26px;
 		}
 
 		@media (max-width: $lg) {
 			margin-right: 0;
-			margin-bottom: 2rem;
+			margin-bottom: 20px;
 			font-size: 3.2rem;
 		}
 
 		@media (max-width: $sm) {
-			margin-bottom: 1.6rem;
+			margin-bottom: 16px;
 			font-size: 2.4rem;
 		}
 	}

@@ -1,21 +1,21 @@
 .brands {
-	padding: 18.5rem 0;
+	padding: 185px 0;
 	text-align: center;
 
 	@media (max-width: $lg) {
-		padding: 10rem 0;
+		padding: 100px 0;
 	}
 
 	@media (max-width: $md) {
-		padding: 6rem 0;
+		padding: 60px 0;
 	}
 
 	&__subheading {
 		max-width: 900px;
-		margin: 2.5rem auto 0;
+		margin: 25px auto 0;
 
 		@media (max-width: $sm) {
-			margin: 1.5rem auto 0;
+			margin: 15px auto 0;
 		}
 	}
 
@@ -24,8 +24,8 @@
 		grid-template-columns: repeat(5, 1fr);
 		gap: 45px 100px;
 		align-items: center;
-		margin-top: 3rem;
-		padding: 0 2rem;
+		margin-top: 30px;
+		padding: 0 20px;
 
 		@media (max-width: $xl) {
 			gap: 45px 70px;
@@ -67,7 +67,7 @@
 
 	&__text {
 		max-width: 380px;
-		margin: 4rem auto 0;
+		margin: 40px auto 0;
 		color: $font-black;
 		line-height: 2.5rem;
 

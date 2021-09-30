@@ -1,15 +1,15 @@
 .workflow {
-	padding: 19.5rem 0 18rem;
+	padding: 195px 0 180px;
 	background: url("./images/bg-workflow.webp") no-repeat 50% 0 / cover,
 		linear-gradient(to bottom, $primary 20%, $bg-light 80%) no-repeat;
 	text-align: center;
 
 	@media (max-width: $lg) {
-		padding: 10rem 0;
+		padding: 100px 0;
 	}
 
 	@media (max-width: $md) {
-		padding: 6rem 0;
+		padding: 60px 0;
 	}
 
 	&__heading {
@@ -17,13 +17,13 @@
 	}
 
 	&__subheading {
-		margin-top: 1.5rem;
+		margin-top: 15px;
 		color: #fff;
 	}
 
 	&__description {
 		max-width: 715px;
-		margin: 2.5rem auto 0;
+		margin: 25px auto 0;
 		color: #fff;
 		font-size: 2rem;
 		line-height: 3.4rem;
@@ -35,11 +35,11 @@
 	}
 
 	&__items {
-		margin-top: 3.5rem;
+		margin-top: 35px;
 	}
 
 	&__item {
-		margin-bottom: 4rem;
+		margin-bottom: 40px;
 
 		&:last-child {
 			margin-bottom: 0;

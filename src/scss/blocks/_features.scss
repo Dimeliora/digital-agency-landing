@@ -1,9 +1,9 @@
 .features {
-	padding-bottom: 18rem;
+	padding-bottom: 180px;
 	background: url("./images/bg-features.webp") no-repeat 50% 0 / contain;
 
 	@media (max-width: $lg) {
-		padding-bottom: 12rem;
+		padding-bottom: 120px;
 	}
 
 	@media (max-width: $lg) {
@@ -11,25 +11,25 @@
 	}
 
 	@media (max-width: $md) {
-		padding-bottom: 8rem;
+		padding-bottom: 80px;
 	}
 
 	@media (max-width: $sm) {
-		padding-bottom: 6rem;
+		padding-bottom: 60px;
 	}
 
 	&__subheading {
 		max-width: 525px;
-		margin-top: 2.5rem;
+		margin-top: 25px;
 
 		@media (max-width: $lg) {
 			max-width: none;
-			margin-top: 1.5rem;
+			margin-top: 15px;
 		}
 	}
 
 	&__items {
-		margin-top: 3rem;
+		margin-top: 30px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 25px 30px;

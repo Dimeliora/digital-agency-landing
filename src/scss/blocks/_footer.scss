@@ -1,13 +1,13 @@
 .footer {
-	padding: 8.5rem 0 3.5rem;
+	padding: 85px 0 35px;
 	background-color: #0d0d0d;
 
 	@media (max-width: $md) {
-		padding: 4.5rem 0 3.5rem;
+		padding: 45px 0 35px;
 	}
 
 	@media (max-width: $sm) {
-		padding: 3rem 0 2.5rem;
+		padding: 30px 0 25px;
 	}
 
 	&__row {
@@ -16,7 +16,7 @@
 		justify-content: space-between;
 
 		&--nav {
-			padding-bottom: 2.7rem;
+			padding-bottom: 27px;
 			border-bottom: 1px solid #ffffff59;
 
 			@media (max-width: $xl) {
@@ -30,7 +30,7 @@
 		}
 
 		&--copyright {
-			padding-top: 2.7rem;
+			padding-top: 27px;
 			font-size: 1.5rem;
 
 			@media (max-width: $sm) {
@@ -75,7 +75,7 @@
 	}
 
 	&__link {
-		margin-right: 3.2rem;
+		margin-right: 32px;
 		--link-color: #ffffffcc;
 
 		&:last-child {
@@ -97,13 +97,13 @@
 
 		@media (max-width: $sm) {
 			align-self: initial;
-			margin-top: 3rem;
+			margin-top: 30px;
 		}
 	}
 
 	&__socials-link {
 		display: inline-block;
-		margin-right: 2rem;
+		margin-right: 20px;
 
 		&:last-child {
 			margin-right: 0;
@@ -142,13 +142,13 @@
 
 	&__policy {
 		@media (max-width: $sm) {
-			margin-bottom: 2rem;
+			margin-bottom: 20px;
 		}
 	}
 
 	&__policy-link {
 		--link-color: #ffffffcc;
-		margin-right: 2.4rem;
+		margin-right: 24px;
 
 		&:last-child {
 			margin-right: 0;

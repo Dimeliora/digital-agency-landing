@@ -1,5 +1,5 @@
 .button {
-	padding: 2rem 5rem;
+	padding: 20px 50px;
 	border: 2px solid #fff;
 	border-radius: 60px;
 	background-color: #fff;
@@ -19,7 +19,7 @@
 	}
 
 	@media (max-width: $md) {
-		padding: 1.4rem 2.4rem;
+		padding: 14px 24px;
 		font-size: 1.2rem;
 	}
 

@@ -1,5 +1,5 @@
 .promo {
-	padding: 22rem 0 9rem;
+	padding: 220px 0 90px;
 	background: url("./images/bg-promo.webp") no-repeat 50% 0,
 		linear-gradient(to bottom, $primary 20%, $bg-light 80%) no-repeat;
 	color: #fff;
@@ -10,12 +10,12 @@
 	}
 
 	@media (max-width: $lg) {
-		padding: 16rem 0;
+		padding: 160px 0;
 		background-position: 50% 115%;
 	}
 
 	@media (max-width: $sm) {
-		padding: 16rem 0 10rem;
+		padding: 160px 0 100px;
 		background-position: 50% 110%;
 	}
 
@@ -41,7 +41,7 @@
 	}
 
 	&__subheading {
-		margin-top: 3.5rem;
+		margin-top: 35px;
 		font-size: 2rem;
 
 		@media (max-width: $md) {
@@ -49,23 +49,23 @@
 		}
 
 		@media (max-width: $sm) {
-			margin-top: 2.5rem;
+			margin-top: 25px;
 			font-size: 1.6rem;
 		}
 	}
 
 	&__button {
-		margin-top: 5rem;
+		margin-top: 50px;
 
 		@media (max-width: $sm) {
-			margin-top: 3.5rem;
+			margin-top: 35px;
 		}
 	}
 
 	&__image {
 		display: block;
 		width: 100%;
-		margin-top: 4rem;
+		margin-top: 40px;
 
 		@media (max-width: $xl) {
 			width: 900px;
