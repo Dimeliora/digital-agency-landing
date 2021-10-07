@@ -1,13 +1,12 @@
-# Практический курс по верстке и JavaScript
+# Верстка лендинга цифрового агентства
 
-Учебное задание #2 в рамках курса - верстка лендинга.
-Адаптивная верстка для устройств с шириной экрана от 320px.
+Адаптивная верстка макета лендинга для устройств с шириной экрана от 320px.
 
 ## Сборка проекта
 
 ```bash
-1. git clone https://github.com/Dimeliora/practical-course-2--landing
-2. cd practical-course-2--landing
+1. git clone https://github.com/Dimeliora/digital-agency-landing
+2. cd digital-agency-landing
 3. npm install
 ```
 
@@ -19,3 +18,8 @@
 - prod - сборка в production-режиме
 
 В режиме production осуществляется минификация HTML, CSS и JS кода, без записи source-map.
+В обоих режимах происходит создание и подключение favicon.
+
+### ВНИМАНИЕ
+
+Для генерации favicon перед запуском скриптов необходимо разместить файл **_favicon.png_** в директории _src/favicon_. В корневой директории проекта расположен файл **_favicon-design.json_** для описания правил отображения иконок на разных устройствах.

@@ -1,5 +1,6 @@
 "use strict";
 
+const fs = require("fs");
 const { src, dest, parallel, series, watch } = require("gulp");
 const del = require("del");
 const gulpIf = require("gulp-if");
@@ -15,31 +16,34 @@ const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const webp = require("gulp-webp");
 const svgSprite = require("gulp-svg-sprite");
+const realFavicon = require("gulp-real-favicon");
 const browserSync = require("browser-sync").create();
 
-const srcPath = "./src";
-const destPath = "./dist";
-const isProd = process.env.NODE_ENV === "production";
-const webpackMode = isProd ? "production" : "development";
+const SRC_PATH = "./src";
+const DEST_PATH = "./dist";
+const FAVICON_DESIGN_PATH = "./favicon-design.json";
+const FAVICON_DATA_PATH = "./favicon-data.json";
+const IS_PROD = process.env.NODE_ENV === "production";
+const WEBPACK_MODE = IS_PROD ? "production" : "development";
 
 // ======== HTML Handler ========
 const html = () =>
-	src(`${srcPath}/*.html`)
+	src(`${SRC_PATH}/*.html`)
 		.pipe(
 			gulpIf(
-				isProd,
+				IS_PROD,
 				htmlMin({
 					collapseWhitespace: true,
 					removeComments: true,
 				})
 			)
 		)
-		.pipe(dest(destPath));
+		.pipe(dest(DEST_PATH));
 
 // ======== SCSS Handler ========
 const scss = () =>
-	src(`${srcPath}/scss/styles.scss`, { allowEmpty: true })
-		.pipe(gulpIf(!isProd, sourcemaps.init()))
+	src(`${SRC_PATH}/scss/styles.scss`, { allowEmpty: true })
+		.pipe(gulpIf(!IS_PROD, sourcemaps.init()))
 		.pipe(
 			sass({
 				outputStyle: "expanded",
@@ -54,22 +58,22 @@ const scss = () =>
 		)
 		.pipe(
 			gulpIf(
-				isProd,
+				IS_PROD,
 				csso({
 					comments: false,
 				})
 			)
 		)
-		.pipe(gulpIf(!isProd, sourcemaps.write(".")))
-		.pipe(dest(destPath))
+		.pipe(gulpIf(!IS_PROD, sourcemaps.write(".")))
+		.pipe(dest(DEST_PATH))
 		.pipe(browserSync.stream());
 
 // ======== JS Handler ========
 const js = () =>
-	src(`${srcPath}/js/index.js`, { allowEmpty: true })
+	src(`${SRC_PATH}/js/index.js`, { allowEmpty: true })
 		.pipe(
 			webpackStream({
-				mode: webpackMode,
+				mode: WEBPACK_MODE,
 				output: {
 					filename: "script.js",
 				},
@@ -84,14 +88,14 @@ const js = () =>
 				},
 			})
 		)
-		.pipe(dest(destPath))
+		.pipe(dest(DEST_PATH))
 		.pipe(browserSync.stream());
 
 // ======== Images Handler ========
 const images = () =>
-	src(`${srcPath}/images/**/*.*`)
+	src(`${SRC_PATH}/images/**/*.*`)
 		.pipe(rename({ dirname: "" }))
-		.pipe(newer(`${destPath}/images`))
+		.pipe(newer(`${DEST_PATH}/images`))
 		.pipe(
 			imagemin([
 				imagemin.gifsicle({ interlaced: true }),
@@ -99,23 +103,23 @@ const images = () =>
 				imagemin.optipng({ optimizationLevel: 5 }),
 			])
 		)
-		.pipe(dest(`${destPath}/images`), {});
+		.pipe(dest(`${DEST_PATH}/images`), {});
 
 // ======== WebP Converter ========
 const webpConvert = () =>
-	src(`${srcPath}/images/**/*.{png,jpg}`)
+	src(`${SRC_PATH}/images/**/*.{png,jpg}`)
 		.pipe(rename({ dirname: "" }))
-		.pipe(newer(`${destPath}/images`))
+		.pipe(newer(`${DEST_PATH}/images`))
 		.pipe(
 			webp({
 				quality: 80,
 			})
 		)
-		.pipe(dest(`${destPath}/images`));
+		.pipe(dest(`${DEST_PATH}/images`));
 
 // ======== SVG Icon Maker ========
 const svg = () =>
-	src(`${srcPath}/icons/**/*.svg`)
+	src(`${SRC_PATH}/icons/**/*.svg`)
 		.pipe(
 			svgSprite({
 				mode: {
@@ -138,43 +142,82 @@ const svg = () =>
 				},
 			})
 		)
-		.pipe(dest(`${destPath}/icons`));
+		.pipe(dest(`${DEST_PATH}/icons`));
 
 // ======== Fonts Copy Handler ========
-const fonts = () => src(`${srcPath}/fonts/*.*`).pipe(dest(`${destPath}/fonts`));
+const fonts = () =>
+	src(`${SRC_PATH}/fonts/*.*`).pipe(dest(`${DEST_PATH}/fonts`));
+
+// ======== Favicons Generation Handler ========
+const makeFavicons = (done) =>
+	realFavicon.generateFavicon(
+		{
+			masterPicture: `${SRC_PATH}/favicon/favicon.png`,
+			dest: `${SRC_PATH}/favicon`,
+			iconsPath: "/icons",
+			design: JSON.parse(fs.readFileSync(FAVICON_DESIGN_PATH)),
+			settings: {
+				scalingAlgorithm: "Mitchell",
+				errorOnImageTooSmall: false,
+				readmeFile: false,
+				htmlCodeFile: false,
+				usePathAsIs: false,
+			},
+			markupFile: FAVICON_DATA_PATH,
+		},
+		done
+	);
+
+// ======== Favicons Injection Handler ========
+const injectFavicons = () =>
+	src(`${SRC_PATH}/index.html`)
+		.pipe(
+			realFavicon.injectFaviconMarkups(
+				JSON.parse(fs.readFileSync(FAVICON_DATA_PATH)).favicon.html_code
+			)
+		)
+		.pipe(dest(SRC_PATH, { overwrite: true }));
+
+// ======== Favicons Copy Handler ========
+const copyFavicons = () =>
+	src(`${SRC_PATH}/favicon/*.*`).pipe(dest(`${DEST_PATH}/icons`));
+
+// ======== Favicons Data remove ========
+const clearFaviconData = () => del(FAVICON_DATA_PATH);
+
+// ======== Dist Clear ========
+const clearDist = () => del(DEST_PATH);
 
 // ======== Dev server ========
 const devServer = () => {
 	browserSync.init({
 		server: {
-			baseDir: destPath,
+			baseDir: DEST_PATH,
 		},
 		port: 8080,
 		notify: false,
 	});
 };
 
-// ======== Dist Clear ========
-const clear = () => del(destPath);
-
 // ======== Watchers ========
 const watchers = () => {
-	watch(`${srcPath}/*.html`, html).on("change", browserSync.reload);
-	watch(`${srcPath}/scss/**/*.scss`, scss);
-	watch(`${srcPath}/js/**/*.js`, js);
-	watch(`${srcPath}/images/**/*.*`, parallel(images, webpConvert));
-	watch(`${srcPath}/icons/**/*.svg`, svg);
+	watch(`${SRC_PATH}/*.html`, html).on("change", browserSync.reload);
+	watch(`${SRC_PATH}/scss/**/*.scss`, scss);
+	watch(`${SRC_PATH}/js/**/*.js`, js);
+	watch(`${SRC_PATH}/images/**/*.*`, parallel(images, webpConvert));
+	watch(`${SRC_PATH}/icons/**/*.svg`, svg);
 };
 
 // ======== Build Task ========
 const build = series(
-	clear,
-	parallel(html, scss, js, images, webpConvert, svg, fonts)
+	clearDist,
+	series(makeFavicons, injectFavicons, clearFaviconData),
+	parallel(html, scss, js, images, webpConvert, svg, fonts, copyFavicons)
 );
 
 // ======== Build & Serve Task ========
 const serve = series(build, parallel(devServer, watchers));
 
 // ======== Exports ========
-exports.serve = serve;
 exports.build = build;
+exports.serve = serve;
