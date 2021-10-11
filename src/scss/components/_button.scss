@@ -1,8 +1,8 @@
 .button {
 	padding: 20px 50px;
-	border: 2px solid #fff;
+	border: 2px solid #f1f1f1;
 	border-radius: 60px;
-	background-color: #fff;
+	background-color: #f1f1f1;
 	color: $primary;
 	font-size: 1.4rem;
 	font-weight: 700;
@@ -13,7 +13,7 @@
 	@media (max-width: $lg) {
 		&:focus,
 		&:hover {
-			background-color: #fff;
+			background-color: #f1f1f1;
 			color: $primary;
 		}
 	}
@@ -27,6 +27,6 @@
 	&:hover {
 		outline: none;
 		background-color: transparent;
-		color: #fff;
+		color: #f1f1f1;
 	}
 }
