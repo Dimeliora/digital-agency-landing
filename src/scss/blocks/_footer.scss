@@ -111,7 +111,7 @@
 			margin-right: 0;
 		}
 
-		&:focus,
+		&:focus-visible,
 		&:hover {
 			outline: none;
 			text-decoration: none;
@@ -122,7 +122,7 @@
 		}
 
 		@media (max-width: $lg) {
-			&:focus,
+			&:focus-visible,
 			&:hover {
 				.footer__socials-icon {
 					fill: #ffffffcc;

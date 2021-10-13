@@ -11,7 +11,7 @@
 	transition: color 0.3s, background-color 0.3s;
 
 	@media (max-width: $lg) {
-		&:focus,
+		&:focus-visible,
 		&:hover {
 			background-color: #f1f1f1;
 			color: $primary;
@@ -23,7 +23,7 @@
 		font-size: 1.2rem;
 	}
 
-	&:focus,
+	&:focus-visible,
 	&:hover {
 		outline: none;
 		background-color: transparent;

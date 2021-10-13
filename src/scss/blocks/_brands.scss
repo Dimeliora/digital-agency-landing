@@ -21,31 +21,18 @@
 
 	&__items {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 45px 100px;
+		grid-template-columns: repeat(auto-fit, 150px);
+		gap: 45px 50px;
 		align-items: center;
+		justify-content: center;
 		margin-top: 30px;
 		padding: 0 20px;
-
-		@media (max-width: $xl) {
-			gap: 45px 70px;
-		}
-
-		@media (max-width: $lg) {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 50px 0;
-		}
-
-		@media (max-width: $sm) {
-			grid-template-columns: 1fr;
-		}
 	}
 
 	&__link {
-		justify-self: center;
 		max-width: 145px;
 
-		&:focus,
+		&:focus-visible,
 		&:hover {
 			outline: none;
 			text-decoration: none;
@@ -53,7 +40,7 @@
 		}
 
 		@media (max-width: $lg) {
-			&:focus,
+			&:focus-visible,
 			&:hover {
 				filter: none;
 			}
