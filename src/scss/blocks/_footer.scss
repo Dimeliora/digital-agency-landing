@@ -111,18 +111,15 @@
 			margin-right: 0;
 		}
 
-		&:focus-visible,
+		&:focus,
 		&:hover {
-			outline: none;
-			text-decoration: none;
-
 			.footer__socials-icon {
 				fill: $primary;
 			}
 		}
 
 		@media (max-width: $lg) {
-			&:focus-visible,
+			&:focus,
 			&:hover {
 				.footer__socials-icon {
 					fill: #ffffffcc;

@@ -1,22 +1,22 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 
-	@media (max-width: $lg) {
-		scroll-behavior: initial;
-	}
+    @media (max-width: $lg) {
+        scroll-behavior: initial;
+    }
 }
 
 body {
-	background-color: $bg-light;
-	font-family: "DM Sans", sans-serif;
-	font-size: 1.6rem;
+    background-color: $bg-light;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
 }
 
 h1,
@@ -24,16 +24,21 @@ h2,
 h3,
 p,
 ul {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a:focus,
+button:focus {
+    outline: none;
 }
 
 .container {
-	max-width: 1210px;
-	margin: 0 auto;
-	padding: 0 20px;
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .prevent-scroll {
-	overflow-y: hidden;
+    overflow-y: hidden;
 }

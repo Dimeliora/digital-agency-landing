@@ -32,15 +32,14 @@
 	&__link {
 		max-width: 145px;
 
-		&:focus-visible,
+		&:focus,
 		&:hover {
-			outline: none;
 			text-decoration: none;
 			filter: sepia(1) hue-rotate(-166deg) saturate(13.5);
 		}
 
 		@media (max-width: $lg) {
-			&:focus-visible,
+			&:focus,
 			&:hover {
 				filter: none;
 			}

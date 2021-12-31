@@ -24,10 +24,8 @@
 		}
 	}
 
-	&:focus-visible,
+	&:focus,
 	&:hover {
-		outline: none;
-
 		&::after {
 			width: 100%;
 		}
