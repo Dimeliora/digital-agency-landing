@@ -1,5 +1,1 @@
-import { menuHandler } from "./menu";
-
-document.addEventListener("DOMContentLoaded", () => {
-	menuHandler();
-});
+import './menu';
