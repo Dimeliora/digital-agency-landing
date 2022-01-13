@@ -1,1 +1,1 @@
-import './menu';
+import './menu-handler.js';
